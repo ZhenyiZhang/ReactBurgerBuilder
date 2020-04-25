@@ -1,26 +1,29 @@
 import React from 'react';
+import Classes from './SummaryButtons.css';
 
 const OrderSummary = (props) => {
-    const CheckoutButtonStyle = {
-        backgroundColor: '#bf3813',
-        fontSize: '1.0rem',
-        color: 'white'
-    };
     const summary = Object.keys(props.summary).map((key, index) => {
-        return(<li key={key + index}>
+        return(
+            <li key={key + index}
+                style={{listStylePosition: 'inside'}}>
             <span style={{ textTransform: 'capitalize'}}>
                 {key}: {props.summary[key]}
             </span>
-        </li>);
-        });
+            </li>);
+    });
     return (
-        <div>
+        <div style={{textAlign:'center'}}>
             <h3>Your Order Summary:</h3>
             <ul>
                 {summary}
             </ul>
-            <button style={CheckoutButtonStyle}>Continue to checkout</button>
-            <button> cancel </button>
+            <h4> Total Price ${props.price}</h4>
+            <button
+                onClick={props.continue}
+                className={[Classes.Button, Classes.Success].join(' ')}>Continue</button>
+            <button
+                onClick={props.cancel}
+                className={[Classes.Button, Classes.Danger].join(' ')}>Cancel</button>
         </div>
     );
 

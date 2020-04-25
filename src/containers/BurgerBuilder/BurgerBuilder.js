@@ -43,6 +43,9 @@ class BurgerBuilder extends Component{
             totalPrice: removedPrice
         })
     };
+    continuePurchasing = () => {
+        alert('Order Confirmed');
+    };
     purchasingHandler = () => {
         this.setState({
             purchasing: !this.state.purchasing
@@ -61,7 +64,11 @@ class BurgerBuilder extends Component{
                 <Modal
                     backDropClick={this.purchasingHandler}
                     show={this.state.purchasing}>
-                    <OrderSummary summary={this.state.ingredients}/>
+                    <OrderSummary
+                        cancel={this.purchasingHandler}
+                        continue={this.continuePurchasing}
+                        price={this.state.totalPrice}
+                        summary={this.state.ingredients}/>
                 </Modal>
                 <BuildControls
                     add={this.addIngredientHandler}
