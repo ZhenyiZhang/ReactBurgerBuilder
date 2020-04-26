@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Classes from './NavItems.css';
+import NavItem from "./NavItem";
 
-const NavItems = () => {
+const NavItems = (props) => {
     return(
-        <ul>
-            <li><a href="/">A Link</a> </li>
+        <ul className={props.sideDraw ? Classes.NavItemsSideDraw : Classes.NavItems}>
+            <NavItem link="/" active>Menu</NavItem>
+            <NavItem link="/" active>Burger Builder</NavItem>
+            <NavItem link="/">Checkout</NavItem>
         </ul>);
 };
 

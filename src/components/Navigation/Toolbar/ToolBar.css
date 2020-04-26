@@ -15,3 +15,21 @@
 .ToolBar .nav {
     height: 100%;
 }
+
+.sideDrawerButton {
+    background-color: #304269;
+    border-color: #304269;
+    border-style: solid;
+}
+
+@media (max-width: 800px) {
+    .desktopOnly {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .sideDrawerButton {
+        display: none;
+    }
+}

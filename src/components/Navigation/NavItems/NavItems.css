@@ -6,3 +6,39 @@
     align-items: center;
     height: 100%;
 }
+
+.NavItemsSideDraw{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.NavItem {
+    margin: 0;
+    box-sizing:border-box;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.NavItem a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    padding: 16px 10px;
+    border-bottom: 4px solid transparent;
+    box-sizing: border-box;
+    display: block;
+}
+
+.NavItem a:hover,
+.NavItem a:active,
+.NavItem a:active {
+    background-color: #40A4C8;
+    border-bottom: 4px solid #304269;
+    color: white;
+}
