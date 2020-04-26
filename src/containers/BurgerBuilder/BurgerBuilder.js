@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Aux from "../../hoc/Aux";
 import Burger from "../../components/burger/Burger";
 import BuildControls from "../../components/burger/buildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";
@@ -59,7 +58,7 @@ class BurgerBuilder extends Component{
             disableButtons[key] = (amount <= 0);
         }
         return(
-            <Aux>
+            <div>
                 <Burger ingredients={this.state.ingredients}/>
                 <Modal
                     backDropClick={this.purchasingHandler}
@@ -78,7 +77,7 @@ class BurgerBuilder extends Component{
                     amount={this.state.ingredients}
                     purchasing={this.purchasingHandler}
                 />
-            </Aux>
+            </div>
         );
     }
 }
