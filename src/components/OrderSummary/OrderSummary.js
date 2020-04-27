@@ -18,6 +18,12 @@ const OrderSummary = (props) => {
                 {summary}
             </ul>
             <h4> Total Price ${props.price}</h4>
+            <p>Your Name:</p>
+            <input/>
+            <br/>
+            <p>Your Phone Number:</p>
+            <input/>
+            <br/>
             <button
                 onClick={props.continue}
                 className={[Classes.Button, Classes.Success].join(' ')}>Continue</button>

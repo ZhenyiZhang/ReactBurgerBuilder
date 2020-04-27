@@ -1,7 +1,7 @@
 .BuildControls {
     text-align: center;
     width: 60%;
-    background-color: #DAA972;
+    background-color: #304269;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -13,11 +13,11 @@
 
 .OrderButton {
     border-radius: 5px;
-    background-color: #DAD735;
+    background-color: #8F5E1E;
     outline: none;
     cursor: pointer;
     border: 1px solid #966909;
-    color: #966909;
+    color: white;
     font-family: inherit;
     font-size: 1.2em;
     padding: 15px 30px;
@@ -40,6 +40,10 @@
 
 .OrderButton:not(:disabled) {
     animation: enable 0.3s linear;
+}
+
+.font {
+    color: white;
 }
 
 
